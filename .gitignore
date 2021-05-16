@@ -1,4 +1,18 @@
+### Gradle template
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Java Template
 *.class
-*.bin
-*.lock
-build
+
+### Package Files
+*.war
+*.ear
+
+### Intellij IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+out/
