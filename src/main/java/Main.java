@@ -40,7 +40,7 @@ public class Main {
           .click();
       wait.until(ExpectedConditions.alertIsPresent()).accept();
     }
-    driver.close();
+    driver.quit();
   }
 
   private static Optional<Long> findTargetCount(WebDriver driver) {
