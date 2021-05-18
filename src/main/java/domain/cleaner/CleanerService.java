@@ -19,8 +19,13 @@ public class CleanerService {
   }
 
   public void clean(CleanTargetType cleanTargetType, AccountVo account) {
-    loginService.login(account);
-    deleteService.delete(cleanTargetType.getUrl(account.getId()));
-    driver.quit();
+    try {
+      loginService.login(account);
+      deleteService.delete(cleanTargetType.getUrl(account.getId()));
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      driver.quit();
+    }
   }
 }
