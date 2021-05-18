@@ -16,3 +16,6 @@ build/
 *.iml
 *.ipr
 out/
+.idea/gradle.xml
+*.lock
+*.lock
