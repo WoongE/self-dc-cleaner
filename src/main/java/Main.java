@@ -12,7 +12,6 @@ public class Main {
     System.setProperty(CHROME_DRIVER_EXE_PROPERTY, "/Applications/chromedriver");
     final AccountVo account = AccountVo.of("id", "password");
     final WebDriver driver = new ChromeDriver();
-    final CleanerService cleanerService = new CleanerService(driver);
-    cleanerService.clean(CleanTargetType.POSTING, account);
+    new CleanerService(driver).clean(CleanTargetType.POSTING, account);
   }
 }
