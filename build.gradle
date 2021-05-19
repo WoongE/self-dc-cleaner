@@ -22,3 +22,12 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': "Main"
+    }
+    baseName = "${rootProject.name}"
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
