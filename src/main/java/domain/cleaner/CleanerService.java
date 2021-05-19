@@ -22,8 +22,6 @@ public class CleanerService {
     try {
       loginService.login(account);
       deleteService.delete(cleanTargetType.getUrl(account.getId()));
-    } catch (Exception e) {
-      e.printStackTrace();
     } finally {
       driver.quit();
     }
