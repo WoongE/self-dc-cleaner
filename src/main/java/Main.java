@@ -20,7 +20,7 @@ public class Main {
       final String path = getChromeDriverPath(bufferedReader);
       final ChromeDriver driver = getChromeDriver(path);
       final AccountVo account = getAccount(bufferedReader);
-      new CleanerService(driver).clean(CleanTargetType.POSTING, account);
+      new CleanerService(driver).clean(CleanTargetType.COMMENT, account);
     } catch (IOException e) {
       e.printStackTrace();
     }
